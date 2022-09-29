@@ -9,7 +9,7 @@ export const CocktailContext = createContext();
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 
 // * Creation of the Provider
-export const CocktailProvider = ({ children }) => {
+const CocktailProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [cocktails, setCocktails] = useState([]);
   const [searchTerms, setSearchTerms] = useState('');
@@ -97,3 +97,5 @@ export const CocktailProvider = ({ children }) => {
     </CocktailContext.Provider>
   );
 };
+
+export default CocktailProvider;
